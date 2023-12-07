@@ -9,3 +9,6 @@ Based on the results, an attempt will be made to assess the impact on companies 
 The dataset used 
 
 The visualization 
+
+
+## KEYWORDS 
