@@ -96,7 +96,7 @@ graph_1 <- ggplot(data_graph1, aes(x = Valori, y = Anno, fill = Class)) +
 print(graph_1)
 
 ```
-knitr::include_graphics("graph_1.png")
+knitr::include_graphics(""C:\Users\huawei\OneDrive\Documents\RExamProject\graph_1"")
 
 
 
