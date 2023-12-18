@@ -94,9 +94,9 @@ graph_1 <- ggplot(data_graph1, aes(x = Valori, y = Anno, fill = Class)) +
   scale_fill_brewer(palette = "PuRd")
 
 print(graph_1)
-knitr::include_graphics("graph_1.png")
-```
 
+```
+knitr::include_graphics("graph_1.png")
 
 
 
