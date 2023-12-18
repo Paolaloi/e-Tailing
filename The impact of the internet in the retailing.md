@@ -17,3 +17,33 @@ As for the data relating to Nike, I found them directly from the annual reports 
 Being taken from different datasets, the data are grouped in an excel file, later formatted to be best used in R Studio. The file was then imported and read using the readxl library.
 Below the reference as file path and the code used in R.
 
+```{r}
+install.packages(c("tidyverse", "readxl"))
+library(tidyverse)
+library(readxl)
+
+percorso_file <- "C:\\Users\\huawei\\OneDrive\\Documents\\xlxs_first_RF.xlsx"
+
+nomi_fogli <- excel_sheets(percorso_file)
+
+liste_tabelle <- setNames(
+  lapply(nomi_fogli, function(nome_foglio) {
+    read_excel(percorso_file, sheet = nome_foglio)
+  }),
+  nomi_fogli
+)
+
+lapply(nomi_fogli, function(nome_foglio) {
+  cat("Tabella:", nome_foglio, "\n")
+  print(head(liste_tabelle[[nome_foglio]]))
+  cat("\n")
+})
+
+tables <- lapply(liste_tabelle, function(tabella) {
+  na.omit(tabella)
+})
+
+print(head(tables))
+```
+
+
