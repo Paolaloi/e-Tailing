@@ -46,14 +46,56 @@ tables <- lapply(liste_tabelle, function(tabella) {
 print(head(tables))
 ```
 
-## METHODOLOGY 
+## 3 METHODOLOGY 
 The conclusions and assumptions made in this study derive from an analysis of the imported data, using a graphical representation to evaluate the trend over time and significant changes. 
 The data are also compared with each other through formulas of statistical inference, in particular in the forecasting phases. 
-Disclaimer. The forecast analysis of the data collected by Statista is done by the company itself, as they take into account numerous factors including analysis of market trends outside of our expertise. Below is the reference link containing the report with all the phases of the analysis of the years 2024 to 2027, data taken into account in this study.
+Disclaimer. The forecast analysis of the data collected by Statista is done by the company itself, as they take into account numerous factors including analysis of market trends outside of our expertise. Below is the reference link containing the report with all the phases of the analysis of the years 2024 to 2027, considered into account in this study.
+
+
 _chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cdn.statcdn.com/static/img/outlook/methodology/methodology-en.pdf_
 
 
 The specific data of the market and the company Nike were chosen after a personal analysis of the company budgets, reporting in this study only the data necessary to answer our questions.
-Among the various numerical analyses carried out are also the calculation of correlation coefficients, differences in historical series and the calculation of percentages from data provided by companies.   
+Among the various numerical analyses carried out are also the calculation of correlation coefficients, differences in historical series and the calculation of percentages from data provided by companies. 
+
+
+## 4 ANALYSIS
+In order to draw conclusions from the data we have, we shift the focus from the global retail market to the specific appareal retail sector. This is because it is the largest category in Fashion eCommerce with a revenue of US$425.5 billion at 2023.
+
+
+This sector is divided into four subcategories, among them different in target, characteristics and profit. 
+
+- Children's Apparel
+- Men's Apparel
+- Women's Apparel
+- Other Apparel
+
+
+As you can see Women’s Apparel holds the record for revenue compared to the others, followed by Men’s apparel.
+Data are to be considered in billions of US$.
+
+```{r}
+
+library(tidyverse)
+library(readxl)
+
+data1<- read_excel(percorso_file, sheet = "Revenue")
+
+data_graph1 <- data1%>%
+  pivot_longer(cols = -Class, names_to = "Anno", values_to = "Valori")
+
+graph_1 <- ggplot(data_graph1, aes(x = Valori, y = Anno, fill = Class)) +
+  geom_col(position = "stack") +
+  labs(title = "Grafico a Colonne in Pila",
+       x = "Classificazione",
+       y = "Valori",
+       fill = "Anno") +
+  theme_minimal() +
+  scale_fill_brewer(palette = "PuRd")
+
+print(graph_1)
+```
+
+
 
 
