@@ -46,4 +46,14 @@ tables <- lapply(liste_tabelle, function(tabella) {
 print(head(tables))
 ```
 
+## METHODOLOGY 
+The conclusions and assumptions made in this study derive from an analysis of the imported data, using a graphical representation to evaluate the trend over time and significant changes. 
+The data are also compared with each other through formulas of statistical inference, in particular in the forecasting phases. 
+Disclaimer. The forecast analysis of the data collected by Statista is done by the company itself, as they take into account numerous factors including analysis of market trends outside of our expertise. Below is the reference link containing the report with all the phases of the analysis of the years 2024 to 2027, data taken into account in this study.
+_chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cdn.statcdn.com/static/img/outlook/methodology/methodology-en.pdf_
+
+
+The specific data of the market and the company Nike were chosen after a personal analysis of the company budgets, reporting in this study only the data necessary to answer our questions.
+Among the various numerical analyses carried out are also the calculation of correlation coefficients, differences in historical series and the calculation of percentages from data provided by companies.   
+
 
