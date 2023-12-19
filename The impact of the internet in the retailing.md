@@ -1,5 +1,5 @@
 ## STRUCTURE
-- 1 PREPARATION
+- 1 INTRODUCTION
     - 1.1 BUSINESS OBJECTIVE
     - 1.2 HOW TO GET THERE
 - 2 DATA USED
@@ -13,7 +13,7 @@
     - 4.4 NIKE SUCCESS
 - 5 CONCLUSION
 
-## 1 PREPARATION
+## 1 INTRODUCTION
 ### 1.1 BUSINESS OBJECTIVE 
 The advent of information and communication technologies (ICTs) has radically redefined human life, shaping new meanings and practices. This revolution has triggered significant changes at the political, social and economic levels, pushing toward a socio-economic restructuring of established behavioral patterns.
 The heart of this thesis focuses on analyzing how businesses, in response to this scenario of change, have been directed and supported by the irruption of ICT in retailing. This transformation has led to the emergence of business models based entirely on these technologies. The revolution in the concept of "e-tailing" became firmly established in the late 1990s, outlining a process of selling goods and services that encompasses the entire interaction with the customer, from the initial stage to the conclusion of transactions, via the Internet.  
