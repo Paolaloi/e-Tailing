@@ -149,7 +149,7 @@ print(grafico_linee)
 ### 4.2 KEY PLAYERS 
 The growth and profitability of this market in e-commerce has brought new names in the ranking of leading companies. I’ll show you below with a tree map based on everyone’s share of the market, created by using a new library: "plotly". 
 As you can see the main player is Amazon, an entirely online platform. 
-I would like to draw the attention to the percentage of Nike Inc, third place in 2022. For reference, in 2013 Nike did not reach any significant share, after that year it began investments in e-commerce and direct sales with a new business strategy called "Triple double" based on the development of a new online marketplace. 
+I would like to draw the attention to the percentage of Nike Inc, third place in 2022. For reference, in 2016 Nike did not reach any significant share, after that year it began investments in e-commerce and direct sales with a new business strategy called "Triple double" based on the development of a new online marketplace. 
 
 
 ```{r}
