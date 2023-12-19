@@ -221,9 +221,47 @@ print(liste_tabelle$Nike_DE)
 ```
 
 
+I reorganized data in R to calculate its ratio
 
+```{r}
+data_linee_stacked <- readxl::read_excel(percorso_file, sheet = "Nike_DE")
 
+data_linee_stacked_long <- data_linee_stacked %>%
+  pivot_longer(cols = -NIKEde, names_to = "Anno", values_to = "Valori")
+```
 
+I divided the Net Debt by the Total Equity and asked for the absolut value.
+
+```{r}
+data_linee_stacked <- readxl::read_excel(percorso_file, sheet = "Nike_DE")
+
+data_linee_stacked_long <- data_linee_stacked %>%
+  pivot_longer(cols = -NIKEde, names_to = "Anno", values_to = "Valori")
+print(data_linee_stacked_long)
+
+ratio_tibble <- data_linee_stacked_long %>%
+  group_by(Anno) %>%
+  summarise(Ratio_DE = abs(sum(Valori[NIKEde == "Net Dept"]) / sum(Valori[NIKEde == "Total Equity"])))
+
+```
+Down below I show the result in a graph. 
+
+```{r}
+
+DE_graph <- ggplot(ratio_tibble, aes(x = Anno, y = Ratio_DE, group = 1)) +
+  geom_line() +
+  geom_point(shape = 16, size = 3, color = "orange") +
+  labs(title = "Net Dept / Total Equity Ratio",
+       x = "Anno",
+       y = "Ratio DE") +
+  theme_minimal() +
+  scale_color_brewer(palette = "OrRd")
+
+print(DE_graph)
+
+```
+
+![image](https://github.com/Paolaloi/e-Tailing/assets/147175173/f969d43c-71ff-44d2-b511-8cb296d08f60)
 
 
 
