@@ -129,7 +129,7 @@ data2<- read_excel(percorso_file, sheet = "RCh_percent")
 data_long <- data2 %>%
   pivot_longer(cols = -RCh_percent, names_to = "Anno", values_to = "Valori")
 
-grafico_linee <- ggplot(data_long, aes(x = Anno, y = Valori, group = RCh_percent, color = RCh_percent)) +
+line_graph <- ggplot(data_long, aes(x = Anno, y = Valori, group = RCh_percent, color = RCh_percent)) +
   geom_line(size = 1) +
   geom_point(size = 2) +
   labs(title = "Revenue Change",
@@ -139,7 +139,7 @@ grafico_linee <- ggplot(data_long, aes(x = Anno, y = Valori, group = RCh_percent
   theme_minimal() +
   scale_color_brewer(palette = "PuRd")
 
-print(grafico_linee)
+print(line_graph)
 
 ```
 ![image](https://github.com/Paolaloi/e-Tailing/assets/147175173/ec4c6284-ef10-402a-9190-52d234751caf)
@@ -193,7 +193,7 @@ colnames(data_d2ci) <- c("Categoria", "Percentuali")
 
 data_d2ci$Percentuali <- as.numeric(sub("%", "", data_d2ci$Percentuali))
 
-grafico_raggruppato <- ggplot(data_d2ci, aes(x = factor(1), y = Percentuali, fill = Categoria)) +
+d2c_graph <- ggplot(data_d2ci, aes(x = factor(1), y = Percentuali, fill = Categoria)) +
   geom_bar(stat = "identity", position = "dodge", width = 0.7) +
   labs(title = "Investments",
        x = NULL,  
@@ -202,7 +202,7 @@ grafico_raggruppato <- ggplot(data_d2ci, aes(x = factor(1), y = Percentuali, fil
   theme(legend.position = "top") +  
   scale_fill_brewer(palette = "PuBu")  
 
-print(grafico_raggruppato)
+print(d2c_graph)
 
 ```
 ![image](https://github.com/Paolaloi/e-Tailing/assets/147175173/b4913857-d12a-4bf9-b373-a80b5adc32ef)
