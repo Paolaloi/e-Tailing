@@ -143,7 +143,7 @@ print(grafico_linee)
 
 
 
-## 4.2 KEY PLAYERS 
+### 4.2 KEY PLAYERS 
 The growth and profitability of this market in e-commerce has brought new names in the ranking of leading companies. I’ll show you below with a tree map based on everyone’s share of the market, created by using a new library: "plotly". 
 As you can see the main player is Amazon, an entirely online platform. 
 I would like to draw the attention to the percentage of Nike Inc, third place in 2022. For reference, in 2013 Nike did not reach any significant share, after that year it began investments in e-commerce and direct sales with a new business strategy called "Triple double" based on the development of a new online marketplace. 
@@ -173,6 +173,37 @@ print(layout)
 
 ```
 ![image](https://github.com/Paolaloi/e-Tailing/assets/147175173/d3c1e397-c76c-4fee-9aeb-0609e08377fa)
+
+
+
+### 4.3 CHANGE IN INVESTEMTS 
+Like Nike, the rest of the market has had to adapt to this trend of digital growth. 
+I organized the data on companies in four categories based on the investments made in e-commerce and digital programming. I’m drawing it in a bar chart. The companies that have made significant investments are 57%, a sign of the recognition of the importance of the changes that trade is going through. 
+Only 1% of the companies did not make any investments. The data are updated to May 2022. 
+
+```{r}
+library(tidyr)
+
+data_d2ci <- readxl::read_excel(percorso_file, sheet = "D2C_Investment")
+
+colnames(data_d2ci) <- c("Categoria", "Percentuali")
+
+data_d2ci$Percentuali <- as.numeric(sub("%", "", data_d2ci$Percentuali))
+
+grafico_raggruppato <- ggplot(data_d2ci, aes(x = factor(1), y = Percentuali, fill = Categoria)) +
+  geom_bar(stat = "identity", position = "dodge", width = 0.7) +
+  labs(title = "Investments",
+       x = NULL,  
+       y = "Percentage") +
+  theme_minimal() +
+  theme(legend.position = "top") +  
+  scale_fill_brewer(palette = "PuBu")  
+
+print(grafico_raggruppato)
+
+```
+![image](https://github.com/Paolaloi/e-Tailing/assets/147175173/b4913857-d12a-4bf9-b373-a80b5adc32ef)
+
 
 
 
