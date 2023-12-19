@@ -272,6 +272,7 @@ We also observe the number of accesses to the Nike.com site and its extensions (
 The data of the revenues are in billions of dollars, while the accesses are to be considered in millions. For this reason we display the data in two different graphs.
 
 ```{r}
+
 library(ggplot2)
 
 dati <- data.frame(
