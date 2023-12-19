@@ -319,4 +319,5 @@ correlation_coefficient <- cor(dati$REVENUE, dati$.com_VISITS, use = "complete.o
 cat("The correlation coefficient between REVENUE and .com VISITS is:", correlation_coefficient, "\n")
 
 ```
+
 The correlation coefficient between REVENUE and .com VISITS is: 0.6850819, showing a strong positive relationship between the two variables analysed. Note, for example, that a peak of access to the site between September and November 2020 (Q2 '21) corresponds to an increase in revenues in the same period; in the following quarter there is a decrease in login to the online site and a corresponding decrease in revenues. Analyzing data from fiscal year 2022 assumes that it is not a relationship in which the independent variable explains the dependent variable totally(as per a linear cause-and-effect relationship), but there is sufficient empirical evidence to confirm the influence of the online market on business results.
