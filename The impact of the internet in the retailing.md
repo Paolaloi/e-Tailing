@@ -143,6 +143,38 @@ print(grafico_linee)
 
 
 
+## 4.2 KEY PLAYERS 
+The growth and profitability of this market in e-commerce has brought new names in the ranking of leading companies. I’ll show you below with a tree map based on everyone’s share of the market, created by using a new library: "plotly". 
+As you can see the main player is Amazon, an entirely online platform. 
+I would like to draw the attention to the percentage of Nike Inc, third place in 2022. For reference, in 2013 Nike did not reach any significant share, after that year it began investments in e-commerce and direct sales with a new business strategy called "Triple double" based on the development of a new online marketplace. 
+
+
+```{r}
+install.packages("plotly")
+library(plotly)
+library(RColorBrewer)
+
+data4 <- readxl::read_excel(percorso_file, sheet = "Key_Players")
+palette_colori <- c(brewer.pal(nrow(data), "Greens"), "orange")
+
+treemap <- plot_ly(
+  labels = as.character(data4$B_S_percent),
+  parents = "",
+  values = data4$`2022`,
+  type = "treemap",
+  hoverinfo = "label+value+percent parent",
+  marker = list(
+    colors = palette_colori,
+    line = list(color = "white", width = 0.5)
+  )
+)
+
+print(layout)
+
+```
+![image](https://github.com/Paolaloi/e-Tailing/assets/147175173/d3c1e397-c76c-4fee-9aeb-0609e08377fa)
+
+
 
 
 
