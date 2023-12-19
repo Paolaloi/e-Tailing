@@ -44,6 +44,7 @@ tables <- lapply(liste_tabelle, function(tabella) {
 })
 
 print(head(tables))
+
 ```
 
 
@@ -56,6 +57,7 @@ data3 <- read_excel(percorso_file, sheet = "ARPR")
 data_long <- data3 %>%
   pivot_longer(cols = -ARPR, names_to = "Anno", values_to = "Valori")
 print(data_long)
+
 ```
 
 
