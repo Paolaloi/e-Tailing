@@ -161,6 +161,7 @@ print(line_graph)
 
 
 
+
 ### 4.2 KEY PLAYERS 
 The growth and profitability of this market in e-commerce has brought new names in the ranking of leading companies. I’ll show you below with a tree map based on everyone’s share of the market, created by using a new library: "plotly". 
 As you can see the main player is Amazon, an entirely online platform. 
