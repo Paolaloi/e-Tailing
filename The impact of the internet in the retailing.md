@@ -307,8 +307,16 @@ print(grafico_com_visits)
 ![image](https://github.com/Paolaloi/e-Tailing/assets/147175173/03cb0d67-461a-46d2-bcc1-732183859b11)
 
 
+Although looking at the graphs you could already see similarity in the historical trend, I transformed the data into numerics and calculated the correlation coefficient between the two data. In this way I also overcame the problem of the difference in unit of measurement. 
 
+```{r}
 
+dati$REVENUE <- as.numeric(dati$REVENUE)
+dati$.com_VISITS <- as.numeric(dati$.com_VISITS)
 
+correlation_coefficient <- cor(dati$REVENUE, dati$.com_VISITS, use = "complete.obs")
 
+cat("The correlation coefficient between REVENUE and .com VISITS is:", correlation_coefficient, "\n")
 
+```
+The correlation coefficient between REVENUE and .com VISITS is: 0.6850819, showing a strong positive relationship between the two variables analysed. Note, for example, that a peak of access to the site between September and November 2020 (Q2 '21) corresponds to an increase in revenues in the same period; in the following quarter there is a decrease in login to the online site and a corresponding decrease in revenues. Analyzing data from fiscal year 2022 assumes that it is not a relationship in which the independent variable explains the dependent variable totally(as per a linear cause-and-effect relationship), but there is sufficient empirical evidence to confirm the influence of the online market on business results.
