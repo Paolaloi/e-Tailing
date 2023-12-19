@@ -62,6 +62,33 @@ print(head(tables))
 
 ```
 
+An example of what the data will loke like in the R environment: 
+
+```{r}
+
+$Revenue
+# A tibble: 5 × 13
+  Class              `2017` `2018` `2019` `2020` `2021` `2022` `2023` `2024` `2025` `2026` `2027` `2028`
+  <chr>               <dbl>  <dbl>  <dbl>  <dbl>  <dbl>  <dbl>  <dbl>  <dbl>  <dbl>  <dbl>  <dbl>  <dbl>
+1 Children's Apparel   26.2   32.2   37.2   46.9   55.4   51.1   55.7   63.2   71.6   75.8   80.8   85.7
+2 Men's Apparel        55.6   66.9   76.6   96.8  117    107.   117.   133.   150.   158.   168.   177. 
+3 Other Apparel        15.6   19.3   22.2   28.4   34.0   35.8   38.3   43.3   48.9   52.3   56.1   59.8
+4 Women's Apparel      95.2  114.   130.   162.   197.   179    196.   222.   251    265.   282    298. 
+5 Total               193.   232.   266.   334.   404.   372.   408.   461.   522.   551.   586.   621. 
+
+$RCh_percent
+# A tibble: 5 × 12
+  RCh_percent        `2018` `2019` `2020` `2021` `2022` `2023` `2024` `2025` `2026` `2027` `2028`
+  <chr>               <dbl>  <dbl>  <dbl>  <dbl>  <dbl>  <dbl>  <dbl>  <dbl>  <dbl>  <dbl>  <dbl>
+1 Children's Apparel   22.8   15.2   26.3   18.1  -7.86   9.01   13.4   13.3   5.93   6.58   6.02
+2 Men's Apparel        20.2   14.5   26.4   21.0  -8.95   9.85   13.4   13.3   5.22   5.99   5.42
+3 Other Apparel        23.9   14.8   28.2   19.9   5.28   6.85   13.0   12.9   7.01   7.23   6.6 
+4 Women's Apparel      19.8   13.6   25.3   21.5  -9.27   9.74   13.1   13.0   5.64   6.35   5.83
+5 Total                20.7   14.2   26.0   20.7  -7.75   9.39   13.2   13.1   5.69   6.36   5.81
+
+
+```
+
 
 In order to operate on the data I had to modify the dataset tables after importing them from Excel. 
 Being double entry tables with historical series I had to use the function of the package tidyverse "pivot_longer"  that converts the format of the data from "wide" to "long". It basically transforms the imported dataframe columns into new rows of a new dataframe.
