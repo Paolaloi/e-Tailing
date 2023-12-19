@@ -97,6 +97,7 @@ print(graph_1)
 
 ```
 
+![image](https://github.com/Paolaloi/e-Tailing/assets/147175173/20818be1-5bb6-4776-bb8b-362d52d7ef11)
 
 
 
