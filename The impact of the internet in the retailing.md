@@ -46,6 +46,19 @@ tables <- lapply(liste_tabelle, function(tabella) {
 print(head(tables))
 ```
 
+
+In order to operate on the data I had to modify the dataset tables after importing them from Excel. 
+Being double entry tables with historical series I had to use the function of the package tidyverse "pivot_longer"  that converts the format of the data from "wide" to "long". It basically transforms the imported dataframe columns into new rows of a new dataframe.
+
+```{r}
+data3 <- read_excel(percorso_file, sheet = "ARPR")
+
+data_long <- data3 %>%
+  pivot_longer(cols = -ARPR, names_to = "Anno", values_to = "Valori")
+print(data_long)
+```
+
+
 ## 3 METHODOLOGY 
 The conclusions and assumptions made in this study derive from an analysis of the imported data, using a graphical representation to evaluate the trend over time and significant changes. 
 The data are also compared with each other through formulas of statistical inference, in particular in the forecasting phases. 
@@ -59,6 +72,7 @@ The specific data of the market and the company Nike were chosen after a persona
 Among the various numerical analyses carried out are also the calculation of correlation coefficients, differences in historical series and the calculation of percentages from data provided by companies. 
 
 
+
 ## 4 ANALYSIS
 In order to draw conclusions from the data we have, we shift the focus from the global retail market to the specific appareal retail sector. This is because it is the largest category in Fashion eCommerce with a revenue of US$425.5 billion at 2023.
 
@@ -70,7 +84,7 @@ This sector is divided into four subcategories, among them different in target, 
 - Women's Apparel
 - Other Apparel
 
-
+### 4.1 APPAREL REVENUES 
 As you can see Women’s Apparel holds the record for revenue compared to the others, followed by Men’s apparel. Other Apparel includes, among others, skorts, outerwear, and clothing accessories such as bandanas, handkerchiefs, and tie clips
 Data are to be considered in billions of US$.
 
@@ -98,6 +112,40 @@ print(graph_1)
 ```
 
 ![image](https://github.com/Paolaloi/e-Tailing/assets/147175173/20818be1-5bb6-4776-bb8b-362d52d7ef11)
+
+The analysis of the data provided on revenue change percentage in the online retail apparel market highlights some significant trends. In 2020, many sectors recorded a contraction in revenues, largely attributable to the impacts of the pandemic from COVID-19. Sectors such as Men’s Apparel and Women’s Apparel have fallen significantly, by 9.0% and 9.3% respectively. However, in 2021, a recovery is observed with an increase of 21.0% in Men’s Apparel and 21.5% in Women’s Apparel.Important also the impact that the war in Ukraine and the difficult relations with Russia have had on the market
+
+The Other Apparel category shows steady growth. Turning to revenues in billions of dollars, Women’s Apparel emerges as the most profitable, indicating strong demand. For the period 2024-2028, despite the uncertainties related to COVID-19, the forecast shows a constant growth in all categories, signalling a positive outlook for online fashion retail.
+
+
+```{r}
+data2<- read_excel(percorso_file, sheet = "RCh_percent")
+
+data_long <- data2 %>%
+  pivot_longer(cols = -RCh_percent, names_to = "Anno", values_to = "Valori")
+
+grafico_linee <- ggplot(data_long, aes(x = Anno, y = Valori, group = RCh_percent, color = RCh_percent)) +
+  geom_line(size = 1) +
+  geom_point(size = 2) +
+  labs(title = "Revenue Change",
+       x = "Anno",
+       y = "Valori",
+       color = "Class") +
+  theme_minimal() +
+  scale_color_brewer(palette = "PuRd")
+
+print(grafico_linee)
+
+```
+![image](https://github.com/Paolaloi/e-Tailing/assets/147175173/ec4c6284-ef10-402a-9190-52d234751caf)
+
+
+
+
+
+
+
+
 
 
 
