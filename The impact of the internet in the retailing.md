@@ -153,6 +153,7 @@ I would like to draw the attention to the percentage of Nike Inc, third place in
 
 
 ```{r}
+
 install.packages("plotly")
 library(plotly)
 library(RColorBrewer)
@@ -231,6 +232,7 @@ data_linee_stacked <- readxl::read_excel(percorso_file, sheet = "Nike_DE")
 
 data_linee_stacked_long <- data_linee_stacked %>%
   pivot_longer(cols = -NIKEde, names_to = "Anno", values_to = "Valori")
+
 ```
 
 I divided the Net Debt by the Total Equity and asked for the absolut value.
@@ -284,7 +286,7 @@ dati <- data.frame(
   `.com_VISITS` = c(260, 279, 355, 279, 352, 368, 387, 407, 444)
 )
 
-grafico_revenue <- ggplot(dati, aes(x = as.factor(seq_along(Colonna1)), y = REVENUE)) +
+revenue_graph <- ggplot(dati, aes(x = as.factor(seq_along(Colonna1)), y = REVENUE)) +
   geom_line(size = 1, aes(color = "REVENUE", group = 1)) +
   labs(title = "REVENUE",
        x = "Quarters",
@@ -292,7 +294,7 @@ grafico_revenue <- ggplot(dati, aes(x = as.factor(seq_along(Colonna1)), y = REVE
   theme_minimal() +
   scale_color_brewer(palette = "RdBu")
 
-grafico_com_visits <- ggplot(dati, aes(x = as.factor(seq_along(Colonna1)), y = `.com_VISITS`)) +
+com_visits_graph <- ggplot(dati, aes(x = as.factor(seq_along(Colonna1)), y = `.com_VISITS`)) +
   geom_line(size = 1, aes(color = ".com_VISITS", group = 1)) +
   labs(title = ".com_VISITS",
        x = "Quarters",
@@ -300,8 +302,8 @@ grafico_com_visits <- ggplot(dati, aes(x = as.factor(seq_along(Colonna1)), y = `
   theme_minimal() +
   scale_color_brewer(palette = "PuBu")
 
-print(grafico_revenue)
-print(grafico_com_visits)
+print(revenue_graph)
+print(com_visits_graph)
 
 ```
 
@@ -324,6 +326,7 @@ cat("The correlation coefficient between REVENUE and .com VISITS is:", correlati
 ```
 
 The correlation coefficient between REVENUE and .com VISITS is: 0.6850819, showing a strong positive relationship between the two variables analysed. Note, for example, that a peak of access to the site between September and November 2020 (Q2 '21) corresponds to an increase in revenues in the same period; in the following quarter there is a decrease in login to the online site and a corresponding decrease in revenues. Analyzing data from fiscal year 2022 assumes that it is not a relationship in which the independent variable explains the dependent variable totally(as per a linear cause-and-effect relationship), but there is sufficient empirical evidence to confirm the influence of the online market on business results.
+
 
 ## 5 CONCLUSION 
 The growth of the online retail apparel industry has led to significant changes in the business landscape, highlighted by industry analysis. In response to the challenges, companies have adapted and invested massively in e-commerce. Nike, for example, has completely transformed its strategy and radically changed the corporate structure. Many other companies have started from its success. The classification of companies according to the investments made shows a widespread recognition of the dynamics of change in trade.  
