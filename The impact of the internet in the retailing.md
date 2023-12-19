@@ -1,3 +1,18 @@
+## STRUCTURE
+- 1 PREPARATION
+    - 1.1 BUSINESS OBJECTIVE
+    - 1.2 HOW TO GET THERE
+- 2 DATA USED
+    - 2.1 DATA USED AND DATA LIMITATION
+    - 2.2 DATA ORGANIZATION, VISUALIZATION AND AGGREGATION
+- 3 METHODOLOGY
+- 4 ANALYSIS
+    - 4.1 APPAREL REVENUES
+    - 4.2 KEY PLAYERS
+    - 4.3 CHANGE IN INVESTEMTS
+    - 4.4 NIKE SUCCESS
+- 5 CONCLUSION
+
 ## 1 PREPARATION
 ### 1.1 BUSINESS OBJECTIVE 
 The advent of information and communication technologies (ICTs) has radically redefined human life, shaping new meanings and practices. This revolution has triggered significant changes at the political, social and economic levels, pushing toward a socio-economic restructuring of established behavioral patterns.
