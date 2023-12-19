@@ -50,6 +50,7 @@ print(head(tables))
 
 In order to operate on the data I had to modify the dataset tables after importing them from Excel. 
 Being double entry tables with historical series I had to use the function of the package tidyverse "pivot_longer"  that converts the format of the data from "wide" to "long". It basically transforms the imported dataframe columns into new rows of a new dataframe.
+Here an example
 
 ```{r}
 data3 <- read_excel(percorso_file, sheet = "ARPR")
