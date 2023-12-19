@@ -272,7 +272,7 @@ The company has proven to be able to finance the total capital by more than 75% 
 While not dependent on its operational performance, Nike’s autonomy index values report asset stability, giving investment margins and growth opportunities. 
 
 ### 4.4 NIKE SUCCESS 
-Given what has been said so far about Nike, we wnat to link its success and increased revenues to the actual use of online distribution channels. To do this I will start from the revenues of Nike, but doing a quartile analysis (range of three months) of the fiscal year, to observe the data more closely. 
+Given what has been said so far about Nike, we want to link its success and increased revenues to the actual use of online distribution channels. To do this I will start from the revenues of Nike, but doing a quartile analysis (range of three months) of the fiscal year, to observe the data more closely. 
 We also observe the number of accesses to the Nike.com site and its extensions (mobile applications) in the same period of time. 
 The data of the revenues are in billions of dollars, while the accesses are to be considered in millions. For this reason we display the data in two different graphs.
 
