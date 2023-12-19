@@ -88,7 +88,9 @@ This sector is divided into four subcategories, among them different in target, 
 - Other Apparel
 
 ### 4.1 APPAREL REVENUES 
-As you can see Women’s Apparel holds the record for revenue compared to the others, followed by Men’s apparel. Other Apparel includes, among others, skorts, outerwear, and clothing accessories such as bandanas, handkerchiefs, and tie clips
+As you can see Women’s Apparel holds the record for revenue compared to the others, followed by Men’s apparel. Other Apparel includes, among others, skorts, outerwear, and clothing accessories such as bandanas, handkerchiefs, and tie clips.
+
+
 Data are to be considered in billions of US$.
 
 ```{r}
