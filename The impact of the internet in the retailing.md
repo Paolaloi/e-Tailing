@@ -52,7 +52,7 @@ The data are also compared with each other through formulas of statistical infer
 Disclaimer. The forecast analysis of the data collected by Statista is done by the company itself, as they take into account numerous factors including analysis of market trends outside of our expertise. Below is the reference link containing the report with all the phases of the analysis of the years 2024 to 2027, considered into account in this study.
 
 
-_chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cdn.statcdn.com/static/img/outlook/methodology/methodology-en.pdf_
+https://cdn.statcdn.com/static/img/outlook/methodology/methodology-en.pdf_
 
 
 The specific data of the market and the company Nike were chosen after a personal analysis of the company budgets, reporting in this study only the data necessary to answer our questions.
