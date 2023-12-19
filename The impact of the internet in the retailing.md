@@ -225,7 +225,7 @@ print(liste_tabelle$Nike_DE)
 ```
 
 
-I reorganized data in R to calculate its ratio
+I reorganized the data in R to calculate its ratio
 
 ```{r}
 data_linee_stacked <- readxl::read_excel(percorso_file, sheet = "Nike_DE")
