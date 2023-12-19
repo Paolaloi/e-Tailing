@@ -205,7 +205,20 @@ print(grafico_raggruppato)
 ![image](https://github.com/Paolaloi/e-Tailing/assets/147175173/b4913857-d12a-4bf9-b373-a80b5adc32ef)
 
 
+However, the investments must be analysed with a view to profitability, to see if the large investments are justified. 
+Take Nike as an example. Starting from the balance sheet data we observe Total equity and Net debt in the years 2017-2022. 
 
+```{r}
+
+print(liste_tabelle$Nike_DE)
+
+ A tibble: 2 × 7
+  NIKEde       `2017` `2018` `2019` `2020` `2021` `2022`
+  <chr>         <dbl>  <dbl>  <dbl>  <dbl>  <dbl>  <dbl>
+1 Total Equity  12407   9812   9040   8055  12767  15281
+2 Net Dept      -2377  -1360   -810   4228   -663   -370
+
+```
 
 
 
