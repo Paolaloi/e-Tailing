@@ -263,6 +263,51 @@ print(DE_graph)
 
 ![image](https://github.com/Paolaloi/e-Tailing/assets/147175173/f969d43c-71ff-44d2-b511-8cb296d08f60)
 
+The company has proven to be able to finance the total capital by more than 75% with own funds in the observed period, thus being less exposed to financial debts and, therefore, to the risk of fluctuations in interest rates. The exception is fiscal year 2020 when the value rose to 0.52, indicating a 52% livelihood from financial debts.
+While not dependent on its operational performance, Nike’s autonomy index values report asset stability, giving investment margins and growth opportunities. 
+
+### 4.4 NIKE SUCCESS 
+Given what has been said so far about Nike, we wnat to link its success and increased revenues to the actual use of online distribution channels. To do this I will start from the revenues of Nike, but doing a quartile analysis (range of three months) of the fiscal year, to observe the data more closely. 
+We also observe the number of accesses to the Nike.com site and its extensions (mobile applications) in the same period of time. 
+The data of the revenues are in billions of dollars, while the accesses are to be considered in millions. For this reason we display the data in two different graphs.
+
+```{r}
+library(ggplot2)
+
+dati <- data.frame(
+  Colonna1 = c("'20 Q4", "'21 Q1", "'21 Q2", "'21 Q3", "'21 Q4", "'22 Q1", "'22 Q2", "'22 Q3", "'22 Q4"),
+  REVENUE = c(6.3, 10.6, 11.2, 10.4, 12.3, 12.2, 11.4, 10.9, 12.2),
+  `.com_VISITS` = c(260, 279, 355, 279, 352, 368, 387, 407, 444)
+)
+
+grafico_revenue <- ggplot(dati, aes(x = as.factor(seq_along(Colonna1)), y = REVENUE)) +
+  geom_line(size = 1, aes(color = "REVENUE", group = 1)) +
+  labs(title = "REVENUE",
+       x = "Quarters",
+       y = "REVENUE") +
+  theme_minimal() +
+  scale_color_brewer(palette = "RdBu")
+
+grafico_com_visits <- ggplot(dati, aes(x = as.factor(seq_along(Colonna1)), y = `.com_VISITS`)) +
+  geom_line(size = 1, aes(color = ".com_VISITS", group = 1)) +
+  labs(title = ".com_VISITS",
+       x = "Quarters",
+       y = ".com_VISITS") +
+  theme_minimal() +
+  scale_color_brewer(palette = "PuBu")
+
+print(grafico_revenue)
+print(grafico_com_visits)
+
+```
+
+![image](https://github.com/Paolaloi/e-Tailing/assets/147175173/acf0ec3f-bb4d-4705-a361-0b0851aa018c)
+
+![image](https://github.com/Paolaloi/e-Tailing/assets/147175173/03cb0d67-461a-46d2-bcc1-732183859b11)
+
+
+
+
 
 
 
